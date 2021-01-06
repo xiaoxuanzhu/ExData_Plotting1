@@ -26,11 +26,6 @@ household_sub$Time <- hms(household_sub$Time)
 
 # convert other variables to numeric class
 household_sub$Global_active_power <- as.numeric(household_sub$Global_active_power)
-household_sub$Global_reactive_power <- as.numeric(household_sub$Global_reactive_power)
-household_sub$Voltage <- as.numeric(household_sub$Voltage)
-household_sub$Global_intensity <- as.numeric(household_sub$Global_intensity)
-household_sub$Sub_metering_1 <- as.numeric(household_sub$Sub_metering_1)
-household_sub$Sub_metering_2 <- as.numeric(household_sub$Sub_metering_2)
 
 # create a new variable date_time
 household_sub2 <- mutate(household_sub, date_time = Date + Time)
